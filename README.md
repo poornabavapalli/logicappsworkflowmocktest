@@ -27,13 +27,14 @@ This example uses the Recurrence trigger and Office 365 Outlook connector. In th
 ![image](https://user-images.githubusercontent.com/38941010/148082526-2be186ad-725b-4939-acea-4f2be215c7e3.png)
 5. Select **Review + Create**. On the validation page, confirm the details that you provided, and select **Create**.
 6. After Azure successfully deploys your app, select **Go to resource**. Or, find and select your logic app resource by typing the name in the Azure search box.
-![image](https://user-images.githubusercontent.com/38941010/148086749-4350be79-64ed-45b1-896b-0b80601f69c8.png)
+
+   ![image](https://user-images.githubusercontent.com/38941010/148086749-4350be79-64ed-45b1-896b-0b80601f69c8.png)
  
    The workflow designer opens and shows a page with an introduction video and commonly used triggers
-7. Under **Templates**, select **Recurrence Trigger**
-    ##Configuration
-8. Select **New step**. Under **Choose an operation**, select **All**
-9. In the search box, enter **outlook** so that you can find connector. Select **Office 365 Outlook **
+7. Under **Templates**, select **Recurrence Trigger**.
+   Set the **interval** and **frequency** for the recurrence. In this scenario, set these properties to run your workflow every minute.
+9. Select **New step**. Under **Choose an operation**, select **All**
+10. In the search box, enter **outlook** so that you can find connector. Select **Office 365 Outlook **
 ![image](https://user-images.githubusercontent.com/38941010/148197317-8d66e5d1-711e-45f4-b3e2-4cdb34239ca4.png)
 10. You can now more easily find and select the action that you want, for example, **Send an email**:
 ![image](https://user-images.githubusercontent.com/38941010/148198609-881bb57a-0123-4be2-a3d5-2d4b6189535a.png)
@@ -61,9 +62,8 @@ This example uses the Recurrence trigger and Office 365 Outlook connector. In th
        - **Headers**     	_The header content to return_
 ![image](https://user-images.githubusercontent.com/38941010/148205138-9aa9dc9d-5e95-4faa-8c80-4f79be9592b1.png)
 
-
 3. For optional properties, open the **Select optional fields** list, and select the properties that you want to mock.
-![image](https://user-images.githubusercontent.com/38941010/148201190-68868dc6-a129-454b-ab13-52c7c8399005.png)
+![image](https://user-images.githubusercontent.com/38941010/148208947-8ddbde3d-6038-4156-b909-2c50e51168f1.png)
 
 4. When you're ready, select **Done**.
    In the action's upper-right corner, the title bar now shows a test beaker icon (Icon for static result), which indicates that you've enabled static results.
@@ -77,7 +77,8 @@ To find earlier workflow runs where the actions use mock data, review that workf
 3. Under the **Essentials** section, select **Runs history**, if not already selected.
 4. In the **Runs history** table, find the **Static Results** column.
    Any run that includes actions with mock data output has the **Static Results** column set to **Enabled**, for example:
-![image](https://user-images.githubusercontent.com/38941010/148202831-ffb01f56-1284-4836-b19a-8b81f006ab6c.png)
+![image](https://user-images.githubusercontent.com/38941010/148208327-87380998-678d-44ba-9b6f-b888d4fbf4d7.png)
+
 5. To view that actions in a run that uses mock data, select the run that you want where the **Static Results** column is set to **Enabled**.
    Actions that use static results show the test beaker (Icon for static result) icon, for example:
 ![image](https://user-images.githubusercontent.com/38941010/148201798-ef64b9a8-c05b-4be5-8efc-50004898363a.png)
