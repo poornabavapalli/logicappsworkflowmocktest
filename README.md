@@ -17,7 +17,10 @@ Office 365 Outlook or Outlook.com email account that works with Logic Apps
 
 This example uses the Recurrence trigger and Office 365 Outlook connector. In the workflow we will be setting up mock data for the Outlook 365 send mail action.On succesful run, Logic App just returns the mock data provided, rather than call Outlook and send an email.
 
-## Create a Logic App
+If you are new to Azure Logic Apps use the Logic App created in Part 1. For experimented developers, use one of your existing workflow to experiment with mock feature.
+
+### Part 1 : Create a Logic App to send an email
+   #### Part 1.1 : Create a Logic App
 1. Sign in to the [Azure portal](https://ms.portal.azure.com/#home) with your Azure account
 2. In the Azure search box, enter **logic apps**, and select **Logic apps**.
 ![image](https://user-images.githubusercontent.com/38941010/148082159-1339c9ae-7277-49c7-b8af-ee0775c009fa.png)
@@ -46,12 +49,13 @@ This example uses the Recurrence trigger and Office 365 Outlook connector. In th
     **Body**: Logic app testing using mock data
 13. Save your logic app. On the designer toolbar, select **Save**
 
-## Run your workflow
+#### Part 1.2: Run your Logic App
 1. To check that the workflow runs correctly, you can wait for the trigger to run based on the set schedule. Or, you can manually run the workflow by selecting Run on the workflow designer toolbar
 2. Succesful workflow sends an email for each run
 ![image](https://user-images.githubusercontent.com/38941010/148200964-cca15072-c5f6-48d7-a87d-bb921d4d2950.png)
 
-## Enable mock data output
+### Part 2: Enable mock data output
+   #### Part 2.1: Steps to enable mock data on a Logic App
 1. Open your logic app workflow in the designer
 2. On the outlook action where you want to return mock data, follow these steps:
    - a. In the action's upper-right corner, select the ellipses (...) button, and then select **Testing**.
@@ -69,7 +73,7 @@ This example uses the Recurrence trigger and Office 365 Outlook connector. In th
    In the action's upper-right corner, the title bar now shows a test beaker icon (Icon for static result), which indicates that you've enabled static results.
 ![image](https://user-images.githubusercontent.com/38941010/148201352-23995924-89df-4a22-96d4-38fc8f4ca525.png)
 
-## Find runs that use mock data
+#### Part 2.2: Find runs that use mock data
 To find earlier workflow runs where the actions use mock data, review that workflow's run history.
 
 1. In the Azure portal, open your logic app workflow in the designer.
